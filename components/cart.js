@@ -14,7 +14,7 @@ export default function Cart() {
   const CartPopup = ({ items }) => {
     return (
       <div className={`${styles.cartPopup} ${utils.flex}`}>
-        <h4 className={utils.textNeutral700}>Cart</h4>
+        <h4 className={utils.textNeutral700}>Carrinho</h4>
         <div className={`${styles.cartPopupBottom} ${utils.flex}`}>
           {items.length ? (
             <>
@@ -22,7 +22,7 @@ export default function Cart() {
               <button
                 className={`${styles.btnCheckout} ${utils.fw700} ${utils.textNeutral100}`}
               >
-                Checkout
+                Finalizar Compra
               </button>
             </>
           ) : (
@@ -36,7 +36,7 @@ export default function Cart() {
   const CartEmpty = () => {
     return (
       <div className={`${styles.cartEmpty} ${utils.grid} ${utils.fw700}`}>
-        Your cart is empty.
+        Seu carrinho está vazio.
       </div>
     );
   };

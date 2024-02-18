@@ -49,23 +49,23 @@ export default function Header() {
         <nav className={styles.navMenu}>
           <ul className={`${styles.navMenuLinks} ${utils.flex}`}>
             <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
-                Collections
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/">
+                Home
               </Link>
             </li>
             <li>
               <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
-                Men
+                Produtos
               </Link>
             </li>
             <li>
               <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
-                Women
+                Categorias
               </Link>
             </li>
             <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
-                About
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="myorders">
+                Meus Pedidos
               </Link>
             </li>
             <li>
@@ -90,7 +90,7 @@ export default function Header() {
                 className={`${styles.navMenuMobileLink} ${utils.flex}`}
                 href="#"
               >
-                Collections
+                Home
               </Link>
             </li>
             <li>
@@ -98,7 +98,7 @@ export default function Header() {
                 className={`${styles.navMenuMobileLink} ${utils.flex}`}
                 href="#"
               >
-                Men
+                Produtos
               </Link>
             </li>
             <li>
@@ -106,7 +106,7 @@ export default function Header() {
                 className={`${styles.navMenuMobileLink} ${utils.flex}`}
                 href="#"
               >
-                Women
+                Categorias
               </Link>
             </li>
             <li>
@@ -114,15 +114,7 @@ export default function Header() {
                 className={`${styles.navMenuMobileLink} ${utils.flex}`}
                 href="#"
               >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`${styles.navMenuMobileLink} ${utils.flex}`}
-                href="#"
-              >
-                Contact
+                Meus Pedidos
               </Link>
             </li>
           </ul>

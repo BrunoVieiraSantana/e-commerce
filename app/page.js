@@ -26,7 +26,7 @@ export default function RootPage() {
         <div className={`${styles.productPrice} ${utils.flex}`}>
           <div className={`${styles.newPrice} ${utils.flex} ${utils.fw700}`}>
             <span className={`${utils.textNeutral700} ${utils.fs500}`}>
-              ${product.currentPrice.toFixed(2)}
+              R${product.currentPrice.toFixed(2)}
             </span>
             <span className={`${styles.discount} ${utils.textOrange400}`}>
               {product.discount}%
@@ -35,7 +35,7 @@ export default function RootPage() {
           <span
             className={`${utils.textNeutral300} ${utils.lineThrough} ${utils.fw700}`}
           >
-            ${product.oldPrice.toFixed(2)}
+            R${product.oldPrice.toFixed(2)}
           </span>
         </div>
         <AddToCart

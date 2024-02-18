@@ -30,7 +30,7 @@ export default function AddToCart({ name, price, thumbnail }) {
         },
       ]);
     } else {
-      alert("Please add at least 1 item.");
+      alert("Por favor, adicione pelo menos 1 item.");
     }
   };
 
@@ -60,7 +60,7 @@ export default function AddToCart({ name, price, thumbnail }) {
         onClick={onAddToCart}
       >
         <img src="images/icon-cart.svg" alt="Cart Icon" />
-        Add to cart
+        Comprar
       </button>
     </div>
   );
