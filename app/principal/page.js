@@ -6,8 +6,18 @@ import { product } from "@/public/data";
 
 export default function Principal() {
   return (
+    
+    
     <div>
-      Destaques
+      <div>
+          <img className={styles.rectanglehomelarge} src="images/rectangle-home-large.png" alt="Rectangle Home Large"/>
+      </div>
+
+      <div>
+          <img className={styles.rectanglehome} src="images/rectangle-home.jpg" alt="Rectangle Home"/>
+      </div>
+  
+      <h1>Destaques</h1>
     <div className={`${styles.main} ${utils.flex}`}>
 
       <h1 className={utils.srOnly}>E-Rede</h1>

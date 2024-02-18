@@ -67,3 +67,26 @@
     margin-bottom: 0;
   }
 }
+
+
+.rectanglehomelarge {
+  display: block;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .rectanglehomelarge {
+      display: none;
+  }
+}
+
+
+.rectanglehome {
+  display: none; 
+}
+
+@media only screen and (max-width: 600px) {
+  .rectanglehome {
+      display: block; 
+  }
+}
