@@ -60,12 +60,12 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/signin">
                 Produtos
               </Link>
             </li>
             <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/signup">
                 Categorias
               </Link>
             </li>
