@@ -17,7 +17,9 @@ export default function Header() {
 
   return (
     <>
-      <header className={`${styles.header} ${utils.flex}`}>
+    
+      <header className={styles.navfull}>
+      <div className={`${styles.header} ${utils.flex}`}>
         <button
           className={
             isNavMenuOpened
@@ -51,32 +53,12 @@ export default function Header() {
         <div className={styles.inputbox}>
           <input type="text" placeholder="Buscar" />
         </div>
+          <Link href="/signup" className={styles.signupbutton}>Cadastre-se</Link>
+          <Link href="/signin" className={styles.signinbutton}>Entrar</Link>
         <div>
-        <nav className={styles.navMenu}>
-          <ul className={`${styles.navMenuLinks} ${utils.flex}`}>
-            <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/signin">
-                Produtos
-              </Link>
-            </li>
-            <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/signup">
-                Categorias
-              </Link>
-            </li>
-            <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="myorders">
-                Meus Pedidos
-              </Link>
-            </li>
-          </ul>
-        </nav>
+
         </div>
+        
         <nav
           className={
             isNavMenuOpened
@@ -119,11 +101,49 @@ export default function Header() {
                 Meus Pedidos
               </Link>
             </li>
+            <li>
+              <Link href="/signup" className={styles.signupbuttonmobile}>Cadastre-se</Link>
+              <Link href="/signin" className={styles.signinbuttonmobile}>Entrar</Link>
+            </li>
+
           </ul>
         </nav>
         <div className={`${styles.navMenuRight} ${utils.flex}`}>
           <Cart />
 
+        </div>
+
+        </div>
+        <div>
+        <nav className={styles.navMenu}>
+          <ul className={`${styles.navMenuLinks} ${utils.flex}`}>
+            <li>
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/signin">
+                Produtos
+              </Link>
+            </li>
+            <li>
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/signup">
+                Categorias
+              </Link>
+            </li>
+            <li>
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="myorders">
+                Meus Pedidos
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <div className={styles.inputboxcontainer}>
+        <div className={styles.inputboxmobile}>
+          <input type="text" placeholder="Buscar" />
+        </div>
+        </div>
         </div>
       </header>
     </>
