@@ -3,15 +3,20 @@
   border: 0;
   cursor: pointer;
   position: relative;
+  filter: brightness(100) ;
+
 }
 
 .cart > img {
   transition: all 200ms ease-in-out;
+
 }
 
 .cart:hover > img {
-  filter: brightness(0);
+  filter: brightness(0) ;
 }
+
+
 
 .cartItemCount {
   background-color: hsl(var(--clr-orange-400));

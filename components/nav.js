@@ -45,7 +45,13 @@ export default function Header() {
             }`}
           ></span>
         </button>
-        <img src="images/logo.png" alt="logo" />
+        <div className={styles.logohome}>
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <div className={styles.inputbox}>
+          <input type="text" placeholder="Buscar" />
+        </div>
+        <div>
         <nav className={styles.navMenu}>
           <ul className={`${styles.navMenuLinks} ${utils.flex}`}>
             <li>
@@ -68,13 +74,9 @@ export default function Header() {
                 Meus Pedidos
               </Link>
             </li>
-            <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
-                Contact
-              </Link>
-            </li>
           </ul>
         </nav>
+        </div>
         <nav
           className={
             isNavMenuOpened
@@ -121,9 +123,7 @@ export default function Header() {
         </nav>
         <div className={`${styles.navMenuRight} ${utils.flex}`}>
           <Cart />
-          <div className={`${styles.avatar} ${utils.flex}`}>
-            <img src="images/image-avatar.png" alt="Icon avatar"></img>
-          </div>
+
         </div>
       </header>
     </>

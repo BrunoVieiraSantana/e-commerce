@@ -35,6 +35,7 @@ export default function AddToCart({ name, price, thumbnail }) {
   };
 
   return (
+    <div>
     <div className={`${styles.productPurchase} ${utils.flex}`}>
       <div className={`${styles.productCounter} ${utils.flex} ${utils.fw700}`}>
         <button className={`${styles.btnDecrease}`} onClick={onDecrease}>
@@ -55,13 +56,16 @@ export default function AddToCart({ name, price, thumbnail }) {
           ></img>
         </button>
       </div>
-      <button
+
+    </div>
+    <button
         className={`${styles.btnAddToCart} ${utils.flex} ${utils.fw700}`}
         onClick={onAddToCart}
       >
         <img src="images/icon-cart.svg" alt="Cart Icon" />
         Comprar
-      </button>
+      </button>  
+
     </div>
   );
 }

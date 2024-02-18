@@ -59,7 +59,7 @@ export default function Cart() {
         <div className={`${styles.cartItemDesc} ${utils.flex}`}>
           <span>{item.name}</span>
           <span>
-            <span>{"$" + item.price.toFixed(2)}</span>
+            <span>{"R$" + item.price.toFixed(2)}</span>
             <span>{" x " + item.qty + " "}</span>
             <span className={`${utils.fw700} ${utils.textNeutral700}`}>
               {"$" + item.subTotal.toFixed(2)}
@@ -87,7 +87,7 @@ export default function Cart() {
   return (
     <>
       <button className={styles.cart} onClick={toggleIsCartOpened}>
-        <img src="images/icon-cart.svg" alt="icon cart" aria-label="Cart"></img>
+        <img src="images/icon-cart.svg" alt="icon cart" aria-label="Cart"/>
         {cartItems.length ? (
           <div className={styles.cartItemCount}>{cartItems.length}</div>
         ) : null}
