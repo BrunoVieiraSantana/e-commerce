@@ -16,7 +16,7 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const headersList = headers()
   const pathname = headersList.get("x-invoke-path") || "";
-  const specificRoute = ["/signin", "/signup"]
+  const specificRoute = "/signin"
 
   console.log("pathname:", pathname);
   console.log("specificRoute:", specificRoute);
