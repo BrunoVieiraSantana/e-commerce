@@ -3,6 +3,7 @@ import utils from "@/components/utils.module.css";
 import ProductGallery from "@/components/productGallery";
 import AddToCart from "@/components/addToCart";
 import { product } from "@/public/data";
+import Link from "next/link";
 
 export default function Principal() {
   return (
@@ -16,11 +17,9 @@ export default function Principal() {
       <div>
           <img className={styles.rectanglehome} src="images/rectangle-home.jpg" alt="Rectangle Home"/>
       </div>
-  
+      <Link href="/myorders" className={styles.homebutton}>Aproveite a Oferta</Link>
       <h1>Destaques</h1>
     <div className={`${styles.main} ${utils.flex}`}>
-
-      <h1 className={utils.srOnly}>E-Rede</h1>
 
       <div className={styles.productDetail}>
       

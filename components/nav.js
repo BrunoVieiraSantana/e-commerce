@@ -47,9 +47,12 @@ export default function Header() {
             }`}
           ></span>
         </button>
+        <div className={styles.tophome}>
+        <Link href="/"> 
         <div className={styles.logohome}>
           <img src="images/logo.png" alt="logo" />
         </div>
+        </Link>
         <div className={styles.inputbox}>
           <input type="text" placeholder="Buscar" />
         </div>
@@ -72,7 +75,7 @@ export default function Header() {
             <li>
               <Link
                 className={`${styles.navMenuMobileLink} ${utils.flex}`}
-                href="#"
+                href="/"
               >
                 Home
               </Link>
@@ -96,7 +99,7 @@ export default function Header() {
             <li>
               <Link
                 className={`${styles.navMenuMobileLink} ${utils.flex}`}
-                href="#"
+                href="myorders"
               >
                 Meus Pedidos
               </Link>
@@ -112,9 +115,10 @@ export default function Header() {
           <Cart />
 
         </div>
+        </div>
 
         </div>
-        <div>
+        <div className={styles.navfull}>
         <nav className={styles.navMenu}>
           <ul className={`${styles.navMenuLinks} ${utils.flex}`}>
             <li>
@@ -123,12 +127,12 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/signin">
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
                 Produtos
               </Link>
             </li>
             <li>
-              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/signup">
+              <Link className={`${styles.navMenuLink} ${utils.flex}`} href="#">
                 Categorias
               </Link>
             </li>
