@@ -4,6 +4,7 @@ import { Kumbh_Sans } from "next/font/google";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import CartProvider from "@/components/cartProvider";
+import { headers } from "next/dist/client/components/headers";
 
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 
@@ -12,15 +13,22 @@ export const metadata = {
   description: "Projeto",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const headersList = headers()
+  const pathname = headersList.get("x-invoke-path") || "";
+  const specificRoute = ["/signin", "/signup"]
+
+  console.log("pathname:", pathname);
+  console.log("specificRoute:", specificRoute);
+
   return (
     <html lang="pt-BR">
       <body className={kumbhSans.className}>
         <CartProvider>
           <div className="container">
-            <Nav />
+            {pathname !== specificRoute && <Nav />}
             {children}
-            <Footer />
+            {pathname !== specificRoute && <Footer />}
           </div>
         </CartProvider>
       </body>
