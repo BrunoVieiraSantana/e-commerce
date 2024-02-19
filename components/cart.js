@@ -62,7 +62,7 @@ export default function Cart() {
             <span>{"R$" + item.price.toFixed(2)}</span>
             <span>{" x " + item.qty + " "}</span>
             <span className={`${utils.fw700} ${utils.textNeutral700}`}>
-              {"$" + item.subTotal.toFixed(2)}
+              {"R$" + item.subTotal.toFixed(2)}
             </span>
           </span>
         </div>
