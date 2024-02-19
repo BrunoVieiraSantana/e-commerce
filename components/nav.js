@@ -16,9 +16,7 @@ export default function Header() {
   };
 
   return (
-    <>
-    
-      <header className={styles.navfull}>
+      <header >
       <div className={`${styles.header} ${utils.flex}`}>
         <button
           className={
@@ -58,10 +56,6 @@ export default function Header() {
         </div>
           <Link href="/signup" className={styles.signupbutton}>Cadastre-se</Link>
           <Link href="/signin" className={styles.signinbutton}>Entrar</Link>
-        <div>
-
-        </div>
-        
         <nav
           className={
             isNavMenuOpened
@@ -118,8 +112,8 @@ export default function Header() {
         </div>
 
         </div>
-        <div className={styles.navfull}>
-        <nav className={styles.navMenu}>
+        
+        <nav className={`${styles.navMenu} ${styles.navfull}`}>
           <ul className={`${styles.navMenuLinks} ${utils.flex}`}>
             <li>
               <Link className={`${styles.navMenuLink} ${utils.flex}`} href="/">
@@ -148,8 +142,6 @@ export default function Header() {
           <input type="text" placeholder="Buscar" />
         </div>
         </div>
-        </div>
       </header>
-    </>
   );
 }
