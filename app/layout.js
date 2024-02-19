@@ -6,6 +6,8 @@ import Footer from "@/components/footer";
 import CartProvider from "@/components/cartProvider";
 import { headers } from "next/dist/client/components/headers";
 
+
+
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,6 +19,7 @@ export default async function RootLayout({ children }) {
   const headersList = headers()
   const pathname = headersList.get("x-invoke-path") || "";
   const specificRoute = "/signin"
+  const specificRoute2 = "/signup"
 
   console.log("pathname:", pathname);
   console.log("specificRoute:", specificRoute);
@@ -26,9 +29,9 @@ export default async function RootLayout({ children }) {
       <body className={kumbhSans.className}>
         <CartProvider>
           <div className="container">
-            {pathname !== specificRoute && <Nav />}
+            {!(pathname === specificRoute || pathname === specificRoute2) && <Nav />}
             {children}
-            {pathname !== specificRoute && <Footer />}
+            {!(pathname === specificRoute || pathname === specificRoute2) && <Footer />}
           </div>
         </CartProvider>
       </body>
